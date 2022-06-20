@@ -66,11 +66,10 @@ body{
     margin-bottom: 5px;
 }
 .form__input:focus{
-    outline: 1px solid var(--blue);
-    box-shadow: 0 0 8px 0 var(--blue);
+    box-shadow: 0 0 5px 0 var(--blue);
 }
 .form__input:not(:placeholder-shown){
-    outline: 2px solid rgb(30, 240, 30);
+    box-shadow: 0 0 0 2px rgb(30, 240, 30);
 }
 
 .form__label{
