@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    --blue: rgb(17, 138, 240);
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--blue);
+}
+
+.form__container{
+    margin: auto;
+    width: 90%;
+    max-width: 350px;
+    background-color: rgb(240, 240, 240);
+    height: 90%;
+    max-height: 350px;
+    min-height: 320px;
+    justify-content: center;
+    border-radius: 0.3rem;
+    box-shadow: 5px 5px 10px rgba(0, 108, 210, 1);
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column-;
+}
+
+.form{
+    display: none;
+}
+
+.form:target{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    width: calc(100% - 2rem);
+    flex: 1;
+}
+
+.form__input{
+    height: 2rem;
+    border: none;
+    background-color: white;
+    outline: none;
+    border-radius: .3rem;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.form__input:focus{
+    outline: 1px solid var(--blue);
+    box-shadow: 0 0 8px 0 var(--blue);
+}
+.form__input:not(:placeholder-shown){
+    outline: 2px solid rgb(30, 240, 30);
+}
+
+.form__label{
+    transform: translateY(-170%);
+    margin-left: 10px;
+    color: rgba(128, 128, 128, 0.4);
+    font-size: 15px;
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label{
+    transform: translateY(-290%);
+    color: #000;
+    margin-left: 0;
+    font-size: 17px;
+    transition-property: transform margin color;
+    transition-duration: 1.5s;
+}
+
+.form__title{
+    margin-bottom: 20px;
+    text-align: center;
+    align-self: center;
+    top: 3rem;
+}
+
+.form__submit{
+    height: 35px;
+    border: 2px solid var(--blue);
+    border-radius: 0.4rem;
+    color: var(--blue);
+    font-weight: 900;
+    font-size: 16px;
+}
+.form__submit:hover{
+    background-color: var(--blue);
+    color: rgb(240, 240, 240);
+    box-shadow: 0 0 5px 0 var(--blue);
+}
+
+.link__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    top: 1rem;
+    align-self: center;
+    width: 50%;
+}
+.link__container>a{
+    text-align: center;
+    text-decoration: none;
+    color: rgb(20, 20, 20);
+    font-size: 18px;
+    font-weight: 900;
+}
+.link__container>a:last-child{
+    border-left: 1px solid rgba(128, 128, 128, 0.4);
+}
+
+#login__form:target ~ .link__container>.login__link{
+    color: rgba(128, 128, 128, 0.4);
+}
+
+#signup__form:target ~ .link__container>.signup__link{
+    color: rgba(128, 128, 128, 0.4);
+}

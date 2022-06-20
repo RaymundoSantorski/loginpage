@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="form__container">
+        <form id="login__form" class="form">
+            <h2 class="form__title">Ingresa a tu cuenta</h2>
+            <input 
+                type="text"
+                id="login__email"
+                class="form__input"
+                placeholder=" "
+            >
+            <label 
+                for="login__email" 
+                class="form__label"
+            >Email</label>
+            <input 
+                type="password"
+                id="login__password"
+                class="form__input"
+                placeholder=" "
+            >
+            <label 
+                for="login__password"
+                class="form__label"
+            >Password</label>
+            <input 
+                type="submit" 
+                class="form__submit"
+                value="Entrar"
+            >
+        </form>
+
+
+        <form id="signup__form" class="form">
+            <h2 class="form__title">Crea una cuenta</h2>
+            <input 
+                type="text"
+                id="signup__email"
+                class="form__input"
+                placeholder=" "
+            >
+            <label 
+                for="signup__email" 
+                class="form__label"
+            >Email</label>
+            <input 
+                type="password"
+                id="signup__password"
+                class="form__input"
+                placeholder=" "
+            >
+            <label 
+                for="signup__password"
+                class="form__label"
+            >Password</label>
+            <input 
+                type="password" 
+                class="form__input" 
+                id="signup__verify_password"
+                placeholder=" "
+            >
+            <label 
+                for="signup__verify_password" 
+                class="form__label"
+                >Verificar contraseña</label>
+            <input 
+                type="submit" 
+                class="form__submit"
+                value="Entrar"
+                placeholder=" "
+            >
+        </form>
+
+        <div class="link__container">
+            <a 
+                href="#login__form"
+                class="login__link"
+            >Login</a>
+            <a 
+                href="#signup__form"
+                class="signup__link"
+            >Sign Up</a>
+        </div>
+        
+    </div>
+</body>
+</html>
