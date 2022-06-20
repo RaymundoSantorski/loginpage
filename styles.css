@@ -33,6 +33,15 @@ body{
     display: none;
 }
 
+.login__form{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    width: calc(100% - 2rem);
+    flex: 1;
+}
+
 .form:target{
     display: flex;
     flex-direction: column;
@@ -40,6 +49,11 @@ body{
     top: 4rem;
     width: calc(100% - 2rem);
     flex: 1;
+    background-color: rgb(240, 240, 240);
+}
+
+.signup__form:target + .login__form{
+    display: none;
 }
 
 .form__input{
@@ -73,7 +87,8 @@ body{
     margin-left: 0;
     font-size: 17px;
     transition-property: transform margin color;
-    transition-duration: 1.5s;
+    transition-duration: 1s;
+    transition-timing-function: linear;
 }
 
 .form__title{
@@ -90,11 +105,13 @@ body{
     color: var(--blue);
     font-weight: 900;
     font-size: 16px;
+    background-color: transparent;
 }
 .form__submit:hover{
     background-color: var(--blue);
     color: rgb(240, 240, 240);
     box-shadow: 0 0 5px 0 var(--blue);
+    border: none;
 }
 
 .link__container{
@@ -108,7 +125,7 @@ body{
 .link__container>a{
     text-align: center;
     text-decoration: none;
-    color: rgb(20, 20, 20);
+    color: rgba(128, 128, 128, 0.4);
     font-size: 18px;
     font-weight: 900;
 }
@@ -117,9 +134,9 @@ body{
 }
 
 #login__form:target ~ .link__container>.login__link{
-    color: rgba(128, 128, 128, 0.4);
+    color: rgb(20, 20, 20);
 }
 
 #signup__form:target ~ .link__container>.signup__link{
-    color: rgba(128, 128, 128, 0.4);
+    color: rgb(20, 20, 20);
 }
